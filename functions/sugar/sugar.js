@@ -3,15 +3,17 @@
 
 function createPage(value) {
   const html = `
-    <!DOCTYPE html>
-    <html>
+  <!DOCTYPE html>
+  <html>
     <body>
-    <div>${value.sgv} ${getArrowChar(value.direction)}</div>
-    <script>
-      setTimeout(() => window.location.reload(), 30 * 1000)
-    </script>
+      <div>${value.sgv} ${getArrowChar(value.direction)}</div>
+      <script>
+        (function() {
+          setTimeout(() => {window.location.reload();}, 30 * 1000);
+        })();
+      </script>
     </body>
-    </html>
+  </html>  
   `;
   return html;
 }
