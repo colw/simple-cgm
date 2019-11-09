@@ -9,7 +9,7 @@ function createPage(value) {
       <div>${value.sgv} ${getArrowChar(value.direction)}</div>
       <script>
         (function() {
-          setTimeout(() => {window.location.reload();}, 30 * 1000);
+          window.setTimeout(() => {window.location.reload();}, 10 * 1000);
         })();
       </script>
     </body>
