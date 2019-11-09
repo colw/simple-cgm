@@ -6,15 +6,27 @@ function createPage(value) {
   const html = `
   <!DOCTYPE html>
   <html>
+    <head>
+      <title>CGM</title>
+      <style>
+        .wrapper {
+          width: 100%;
+          font-size: 10em;
+        }
+      </style>
+    </head>
+
     <body>
-      <div id="time">${time}</div>
-      <div>${value.sgv} ${getArrowChar(value.direction)}</div>
+      <div class="wrapper">
+        <div id="time">${time}</div>
+        <div>${value.sgv} ${getArrowChar(value.direction)}</div>
+      </div>
       <script>
         (function() {
           function reload() {
             window.location.reload();
           }
-          window.setTimeout(reload, 10 * 1000);
+          window.setTimeout(reload, 5 * 60 * 1000);
           document.getElementById("time").innerHTML = new Date().toTimeString();
         })();
       </script>
