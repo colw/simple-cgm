@@ -10,6 +10,7 @@ function createPage(value) {
       <title>CGM</title>
       <style>
         .wrapper {
+          text-align: center;
           width: 100%;
           font-size: 10em;
         }
@@ -26,8 +27,12 @@ function createPage(value) {
           function reload() {
             window.location.reload();
           }
+          function getClock() {
+            var d = (new Date()).toLocaleTimeString().split(':')
+            return d[0] + ":" + d[1]
+          }
           window.setTimeout(reload, 5 * 60 * 1000);
-          document.getElementById("time").innerHTML = new Date().toTimeString();
+          document.getElementById("time").innerHTML = getClock();
         })();
       </script>
     </body>
