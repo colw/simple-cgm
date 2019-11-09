@@ -9,10 +9,6 @@ function createPage(value) {
     <head>
       <title>CGM</title>
       <style>
-        html {
-          writing-mode: vertical-rl;
-          text-orientation: mixed;
-        }      
         .wrapper {
           text-align: center;
           width: 100%;
