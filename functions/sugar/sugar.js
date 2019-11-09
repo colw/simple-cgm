@@ -12,7 +12,7 @@ function createPage(value) {
         .wrapper {
           text-align: center;
           width: 100%;
-          font-size: 10em;
+          font-size: 9em;
         }
       </style>
     </head>
