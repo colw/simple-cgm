@@ -9,6 +9,15 @@ function createPage(value) {
     <head>
       <title>CGM</title>
       <style>
+        html {
+          transform: rotate(-90deg);
+          transform-origin: left top;
+          width: 100vh;
+          overflow-x: hidden;
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }      
         .wrapper {
           text-align: center;
           width: 100%;
