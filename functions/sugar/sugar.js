@@ -2,14 +2,17 @@
 // for a full working demo of Netlify Identity + Functions, see https://netlify-gotrue-in-react.netlify.com/
 
 function createPage(value) {
+  const time = new Date();
   const html = `
   <!DOCTYPE html>
   <html>
     <body>
-      <div>${value.sgv} ${getArrowChar(value.direction)}</div>
-      <script>
+    <div id="time">${time}</div>
+    <div>${value.sgv} ${getArrowChar(value.direction)}</div>
+    <script>
         (function() {
           window.setTimeout(() => {window.location.reload();}, 10 * 1000);
+          document.getElementById("time").innerHTML = new Date().toTimeString();
         })();
       </script>
     </body>
