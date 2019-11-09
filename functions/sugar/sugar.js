@@ -7,9 +7,9 @@ function createPage(value) {
   <!DOCTYPE html>
   <html>
     <body>
-    <div id="time">${time}</div>
-    <div>${value.sgv} ${getArrowChar(value.direction)}</div>
-    <script>
+      <div id="time">${time}</div>
+      <div>${value.sgv} ${getArrowChar(value.direction)}</div>
+      <script>
         (function() {
           window.setTimeout(() => {window.location.reload();}, 10 * 1000);
           document.getElementById("time").innerHTML = new Date().toTimeString();
