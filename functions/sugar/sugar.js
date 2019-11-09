@@ -30,7 +30,7 @@ function createPage(value) {
           var d = (new Date()).toLocaleTimeString().split(':')
           return d[0] + ":" + d[1]
         }
-        window.setTimeout(reload, 5 * 60 * 1000);
+        window.setTimeout(reload, 1 * 60 * 1000);
         document.getElementById("time").innerHTML = getTime();
       </script>
     </body>
