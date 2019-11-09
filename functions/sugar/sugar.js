@@ -1,6 +1,18 @@
 /* eslint-disable */
 // for a full working demo of Netlify Identity + Functions, see https://netlify-gotrue-in-react.netlify.com/
 
+function createPage(value) {
+  const html = `
+    <!DOCTYPE html>
+    <html>
+    <body>
+    <h1>${value.sgv}</h1>
+    </body>
+    </html>
+  `;
+  return html;
+}
+
 const fetch = require("node-fetch");
 exports.handler = async function(event, context) {
   try {
@@ -12,7 +24,7 @@ exports.handler = async function(event, context) {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ cgmvalue: data[0].sgv })
+      body: createPage(data[0])
     };
   } catch (err) {
     console.log(err); // output to netlify function log
