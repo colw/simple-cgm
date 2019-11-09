@@ -11,7 +11,10 @@ function createPage(value) {
       <div>${value.sgv} ${getArrowChar(value.direction)}</div>
       <script>
         (function() {
-          window.setTimeout(() => {window.location.reload();}, 10 * 1000);
+          function reload() {
+            window.location.reload();
+          }
+          window.setTimeout(reload, 10 * 1000);
           document.getElementById("time").innerHTML = new Date().toTimeString();
         })();
       </script>
