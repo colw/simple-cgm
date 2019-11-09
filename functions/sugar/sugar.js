@@ -23,17 +23,15 @@ function createPage(value) {
         <div>${value.sgv} ${getArrowChar(value.direction)}</div>
       </div>
       <script>
-        (function() {
-          function reload() {
-            window.location.reload();
-          }
-          function getClock() {
-            var d = (new Date()).toLocaleTimeString().split(':')
-            return d[0] + ":" + d[1]
-          }
-          window.setTimeout(reload, 5 * 60 * 1000);
-          document.getElementById("time").innerHTML = getClock();
-        })();
+        function reload() {
+          window.location.reload();
+        }
+        function getTime(date) {
+          var d = (new Date()).toLocaleTimeString().split(':')
+          return d[0] + ":" + d[1]
+        }
+        window.setTimeout(reload, 5 * 60 * 1000);
+        document.getElementById("time").innerHTML = getTime();
       </script>
     </body>
   </html>  
